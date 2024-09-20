@@ -2,7 +2,7 @@ variable "project_name" {
     default = "roboshop"
 }
 
-variable "vpc_cidr" {
+variable "cidr_block" {
     default = "10.0.0.0/16"
 }
 
@@ -34,4 +34,15 @@ variable "private_subnet_cidr"{
 
 variable "private_subnet_tags"{
     default = {}
+}
+variable "database_subnet_cidr"{
+    default = ["10.0.21.0/24","10.0.22.0/24"]
+}
+
+variable "database_subnet_tags"{
+    default = {}
+}
+
+variable "is_perring_required"{
+    default = true
 }
